@@ -17,7 +17,7 @@ Find any word in any file across your entire system in seconds, not minutes.
 
 ## 🎯 What It Does
 
-WORDFINDER is a blazing-fast bash utility that searches for words across your entire filesystem. Powered by parallel processing and intelligent file filtering, it delivers results up to **4x faster** than traditional grep searches.
+WordHunt-X is a blazing-fast bash utility that searches for words across your entire filesystem. Powered by parallel processing and intelligent file filtering, it delivers results up to **4x faster** than traditional grep searches.
 
 Perfect for developers, system administrators, security researchers, and anyone who needs to locate text across large directory structures.
 
@@ -38,7 +38,7 @@ Perfect for developers, system administrators, security researchers, and anyone 
 
 ## 🚀 Performance
 
-| Search Type | Traditional grep | WORDFINDER TURBO |
+| Search Type | Traditional grep | WordHunt-X TURBO |
 |-------------|------------------|------------------|
 | Home folder (~10K files) | 45 seconds | **12 seconds** ⚡ |
 | Large project (~50K files) | 3.5 minutes | **55 seconds** ⚡ |
@@ -176,7 +176,7 @@ Location: ~/docs/
 
 ### File Type Filtering
 
-By default, WORDFINDER searches these file types for maximum speed:
+By default, WordHunt-X searches these file types for maximum speed:
 - `.txt` - Text files
 - `.sh` - Shell scripts
 - `.log` - Log files
@@ -187,7 +187,7 @@ By default, WORDFINDER searches these file types for maximum speed:
 
 ### Parallel Processing
 
-WORDFINDER uses `xargs -P 4` to search 4 files simultaneously. 
+WordHunt-X uses `xargs -P 4` to search 4 files simultaneously. 
 
 **Optimize for your system:**
 ```bash
@@ -249,7 +249,7 @@ Input → Validation → File Discovery → Parallel Search → Result Aggregati
 
 ### Permission Handling
 
-WORDFINDER automatically suppresses permission errors for cleaner output:
+WordHunt-X automatically suppresses permission errors for cleaner output:
 ```bash
 2>/dev/null  # Hides "Permission denied" messages
 ```
@@ -289,7 +289,7 @@ If you find 100+ files, consider:
 **Solution 2:** Check file permissions
 ```bash
 ls -l /path/to/file
-# If you can't read it, WORDFINDER can't either
+# If you can't read it, WordHunt-X can't either
 ```
 
 ### Search is slow
@@ -427,17 +427,17 @@ Built for the community, by the community.
 
 Inspired by developers worldwide who got tired of waiting for slow searches.
 
-Special thanks to the open-source community for creating the tools that make WORDFINDER possible: `bash`, `grep`, `find`, and `xargs`.
+Special thanks to the open-source community for creating the tools that make WordHunt-X possible: `bash`, `grep`, `find`, and `xargs`.
 
 ---
 
-## 🌟 Why WORDFINDER?
+## 🌟 Why WordHunt-X?
 
 **The Problem:**
 Traditional file searching is painfully slow on large filesystems. Grep searches files one at a time, taking minutes or hours for comprehensive searches.
 
 **The Solution:**
-WORDFINDER combines parallel processing, intelligent file filtering, and modern bash techniques to deliver results in a fraction of the time.
+WordHunt-X combines parallel processing, intelligent file filtering, and modern bash techniques to deliver results in a fraction of the time.
 
 **The Result:**
 A tool that respects your time and gets you answers fast.
@@ -468,7 +468,7 @@ Stay tuned for updates!
 
 <div align="center">
 
-**⚡ WORDFINDER v2.0 TURBO**
+**⚡ WordHunt-X v2.0 TURBO**
 
 *Find anything. Find it fast. Find it now.*
 
