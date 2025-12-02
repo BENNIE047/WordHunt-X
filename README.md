@@ -17,6 +17,20 @@ Find any word in any file across your entire system in seconds, not minutes.
 
 ## 🎯 What It Does
 
+<div align="center">
+
+```mermaid
+graph LR
+    A[📝 Enter Word] --> B[⚙️ Configure Options]
+    B --> C[🔍 Parallel Search]
+    C --> D[📊 Results in Seconds]
+    D --> E[👁️ Preview Files]
+    style A fill:#00ff00,stroke:#fff,stroke-width:2px,color:#000
+    style D fill:#ffff00,stroke:#fff,stroke-width:2px,color:#000
+```
+
+</div>
+
 WordHunt-X is a blazing-fast bash utility that searches for words across your entire filesystem. Powered by parallel processing and intelligent file filtering, it delivers results up to **4x faster** than traditional grep searches.
 
 Perfect for developers, system administrators, security researchers, and anyone who needs to locate text across large directory structures.
@@ -25,24 +39,46 @@ Perfect for developers, system administrators, security researchers, and anyone 
 
 ## ✨ Key Features
 
-⚡ **Parallel Processing** - Searches multiple files simultaneously using all CPU cores  
-🎯 **Smart File Filtering** - Targets text files only, skips binaries for speed  
-🔍 **Case-Sensitive Options** - Choose between exact or flexible matching  
-📊 **Live Progress Indicator** - Animated spinner shows search status  
-👁️ **Preview Mode** - View file contents with highlighted matches  
-🛡️ **Error Handling** - Gracefully handles permissions and missing directories  
-🎨 **Beautiful Interface** - ASCII art banner and clean, intuitive prompts  
-📈 **Result Counting** - Shows exactly how many files contain your search term  
+<div align="center">
+
+| Feature | Description |
+|---------|-------------|
+| ⚡ **Parallel Processing** | Searches multiple files simultaneously using all CPU cores |
+| 🎯 **Smart File Filtering** | Targets text files only, skips binaries for maximum speed |
+| 🔍 **Case-Sensitive Options** | Choose between exact or flexible matching |
+| 📊 **Live Progress Indicator** | Animated spinner shows real-time search status |
+| 👁️ **Preview Mode** | View file contents with syntax-highlighted matches |
+| 🛡️ **Error Handling** | Gracefully handles permissions and missing directories |
+| 🎨 **Beautiful Interface** | ASCII art banner and clean, intuitive prompts |
+| 📈 **Result Counting** | Shows exactly how many files contain your search term |
+
+</div>
 
 ---
 
 ## 🚀 Performance
 
-| Search Type | Traditional grep | WordHunt-X TURBO |
-|-------------|------------------|------------------|
-| Home folder (~10K files) | 45 seconds | **12 seconds** ⚡ |
-| Large project (~50K files) | 3.5 minutes | **55 seconds** ⚡ |
-| System-wide search | 8-15 minutes | **2-4 minutes** ⚡ |
+<div align="center">
+
+```diff
++ 4x FASTER than traditional grep searches
++ Parallel processing across all CPU cores  
++ Smart file filtering for maximum efficiency
+```
+
+| Search Type | Traditional grep | WordHunt-X TURBO | Speed Gain |
+|-------------|------------------|------------------|------------|
+| Home folder (~10K files) | 45 seconds | **12 seconds** ⚡ | 3.75x faster |
+| Large project (~50K files) | 3.5 minutes | **55 seconds** ⚡ | 3.81x faster |
+| System-wide search | 8-15 minutes | **2-4 minutes** ⚡ | 4x faster |
+
+<br/>
+
+![Performance](https://img.shields.io/badge/performance-4x%20faster-success?style=for-the-badge)
+![Efficiency](https://img.shields.io/badge/efficiency-optimized-blue?style=for-the-badge)
+![Resource](https://img.shields.io/badge/CPU-multi--core-orange?style=for-the-badge)
+
+</div>
 
 *Results measured on quad-core system. Performance scales with CPU cores.*
 
@@ -50,7 +86,11 @@ Perfect for developers, system administrators, security researchers, and anyone 
 
 ## 📦 Installation
 
-### Quick Install
+<div align="center">
+
+### ⚡ Quick Install
+
+</div>
 
 ```bash
 # Download the script
@@ -63,9 +103,13 @@ chmod +x wordfinder.sh
 ./wordfinder.sh
 ```
 
-### System-Wide Installation (Optional)
+<div align="center">
+
+### 🌍 System-Wide Installation (Optional)
 
 For global access from anywhere:
+
+</div>
 
 ```bash
 # Move to system binaries
@@ -74,6 +118,13 @@ sudo mv wordfinder.sh /usr/local/bin/wordfinder
 # Now use it from anywhere
 wordfinder
 ```
+
+<div align="center">
+
+![Installation](https://img.shields.io/badge/install-3%20commands-green?style=for-the-badge)
+![Ready](https://img.shields.io/badge/ready%20in-30%20seconds-blue?style=for-the-badge)
+
+</div>
 
 ---
 
@@ -134,6 +185,31 @@ wordfinder
 ---
 
 ## 💡 Use Cases
+
+<div align="center">
+
+```mermaid
+mindmap
+  root((WordHunt-X))
+    🔐 Security
+      Find credentials
+      Audit code
+      Scan configs
+    🐛 Development
+      Locate bugs
+      Find functions
+      Track TODOs
+    📚 Documentation
+      Search guides
+      Find references
+      Locate examples
+    ⚙️ System Admin
+      Check logs
+      Find configs
+      Audit files
+```
+
+</div>
 
 ### 🔐 Security Auditing
 ```bash
@@ -209,12 +285,40 @@ After finding results, you can:
 
 ## 🎓 How It Works
 
+<div align="center">
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant W as WordHunt-X
+    participant F as Find
+    participant X as Xargs
+    participant G as Grep
+    
+    U->>W: Enter search word
+    W->>F: Locate text files
+    F->>X: Send file list
+    X->>G: Parallel search (4 cores)
+    G->>W: Return matches
+    W->>U: Display results ⚡
+    
+    Note over X,G: 4x faster with parallel processing!
+```
+
+</div>
+
 ### The Technology Stack
 
-1. **`find`** - Locates files matching specific patterns
-2. **`xargs`** - Enables parallel processing across multiple cores
-3. **`grep`** - Performs the actual text searching
-4. **Bash scripting** - Orchestrates the entire workflow
+<div align="center">
+
+| Tool | Purpose | Why It's Fast |
+|------|---------|---------------|
+| **`find`** | Locates files | Pre-filters by file type |
+| **`xargs`** | Parallel processing | Uses all CPU cores |
+| **`grep`** | Text searching | Optimized pattern matching |
+| **Bash** | Orchestration | Efficient scripting |
+
+</div>
 
 ### The Process
 
@@ -224,14 +328,18 @@ Input → Validation → File Discovery → Parallel Search → Result Aggregati
 
 ### Speed Optimizations
 
+<div align="center">
+
 | Technique | Speed Gain | Implementation |
 |-----------|------------|----------------|
-| Parallel processing | 4x | `xargs -P 4` |
-| File type filtering | 2-3x | `find` with `-name` patterns |
-| Binary file skipping | 1.5x | Text file focus |
-| Error suppression | 1.2x | `2>/dev/null` |
+| 🔀 Parallel processing | **4x** | `xargs -P 4` |
+| 🎯 File type filtering | **2-3x** | `find` with `-name` patterns |
+| 🚫 Binary file skipping | **1.5x** | Text file focus |
+| 🔇 Error suppression | **1.2x** | `2>/dev/null` |
 
 **Combined effect: Up to 14x faster than basic grep!** 🚀
+
+</div>
 
 ---
 
@@ -470,7 +578,9 @@ Stay tuned for updates!
 
 **⚡ WordHunt-X v2.0 TURBO**
 
-*Find anything. Find it fast. Find it now.*
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=2000&pause=1000&color=F7DC6F&center=true&vCenter=true&width=500&lines=Find+anything.+Find+it+fast.;Hunt+it+down.+Hunt+it+now.;Built+with+%E2%9A%A1+by+BENNIE047" alt="Typing SVG" />
+
+<br/>
 
 ---
 
@@ -478,7 +588,21 @@ Made with 💙 and ⚡ by [BENNIE047](https://github.com/BENNIE047)
 
 *Because life's too short for slow searches.*
 
-[![GitHub](https://img.shields.io/badge/GitHub-BENNIE047-black?logo=github)](https://github.com/BENNIE047)
-[![Instagram](https://img.shields.io/badge/Instagram-Idk._bennie-E4405F?logo=instagram)](https://instagram.com/Idk._bennie)
+<br/>
+
+[![GitHub](https://img.shields.io/badge/GitHub-BENNIE047-black?style=for-the-badge&logo=github)](https://github.com/BENNIE047)
+[![Instagram](https://img.shields.io/badge/Instagram-Idk._bennie-E4405F?style=for-the-badge&logo=instagram)](https://instagram.com/Idk._bennie)
+
+<br/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=BENNIE047&color=brightgreen&style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/BENNIE047/WordHunt-X?style=for-the-badge&color=yellow)
+![Forks](https://img.shields.io/github/forks/BENNIE047/WordHunt-X?style=for-the-badge&color=blue)
+
+<br/>
+
+```
+⭐ Star this repo if WordHunt-X helped you! ⭐
+```
 
 </div>
